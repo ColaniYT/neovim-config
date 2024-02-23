@@ -7,7 +7,7 @@ local mappings = {
     f = { "Open Lazygit in floating Terminal" },
   },
   ["/"] = { "Open Floating Terminal" },
-  T = { "Open Terminal below" },
+  T = { "Toggle Terminal below" },
 }
 
 local opts = {prefix = "<leader>"}
