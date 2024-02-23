@@ -72,7 +72,7 @@ keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>/", "<cmd>ToggleTerm direction=float<cr>", opts)
 keymap("n", "<leader>T", ":botright 10split | <cmd>ToggleTerm direction=float<CR><CR>i", opts)
 keymap("t", "<Space>T", "<C-c>exit<CR>", opts)
+keymap("t", "jk", "<C-c>exit<CR>", opts)
 
 -- Lazygit
 keymap("n", "<leader>gf", "<cmd>ToggleTerm direction=float<cr> lazygit<cr>", opts)
-
