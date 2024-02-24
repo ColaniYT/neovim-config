@@ -67,7 +67,8 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 keymap("n", "<leader><Tab>", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<c-k>", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<c-t>", "<cmd>Telescope current_buffer_fuzzy_find<cr>", opts)
 
 -- Toggleterm
 keymap("n", "<leader>/", "<cmd>ToggleTerm direction=float<cr>", opts)
