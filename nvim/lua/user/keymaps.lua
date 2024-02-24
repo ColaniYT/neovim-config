@@ -34,22 +34,25 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
+keymap("n", "<c-a>", "<cmd>:bd<CR> :bprevious<CR>", opts) -- close buffer
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Move text up and down
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts) -- BUGGED
+keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts) -- BUGGED
 
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
+
+-- Shift Tab behaviour
 keymap("i", "<S-Tab>", "<C-\\><C-N><<<C-\\><C-N>^i", opts)
 
 -- Move text up and down
-keymap("v", "<A-j>", ":m .+1<CR>==", opts) 
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
+keymap("v", "<A-j>", ":m .+1<CR>==", opts) -- BUGGED
+keymap("v", "<A-k>", ":m .-2<CR>==", opts) -- BUGGED
 keymap("v", "p", '"_dP', opts)
 
 -- Visual Block --
@@ -66,18 +69,16 @@ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
-keymap("n", "<leader><Tab>", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
-keymap("n", "<c-k>", "<cmd>Telescope live_grep<cr>", opts)
-keymap("n", "<c-t>", "<cmd>Telescope current_buffer_fuzzy_find<cr>", opts)
-
 -- Toggleterm
 keymap("n", "<leader>/", "<cmd>ToggleTerm direction=float<cr>", opts)
 keymap("n", "<leader>T", ":botright 13split | <cmd>ToggleTerm direction=float<CR><CR>i", opts)
 keymap("t", "<Space>T", "<C-c>exit<CR>", opts)
 keymap("t", "jk", "<C-c>exit<CR>", opts)
 
+-- Telescope
+keymap("n", "<leader><Tab>", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+keymap("n", "<c-c>", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<c-t>", "<cmd>Telescope current_buffer_fuzzy_find<cr>", opts)
+
 -- Lazygit
 keymap("n", "<leader>gf", "<cmd>ToggleTerm direction=float<cr> lazygit<cr>", opts)
-
--- Bufferline
-keymap("n", "<c-a>", "<cmd>:bd<CR> :bprevious<CR>", opts)
