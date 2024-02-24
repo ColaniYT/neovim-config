@@ -78,3 +78,6 @@ keymap("t", "jk", "<C-c>exit<CR>", opts)
 
 -- Lazygit
 keymap("n", "<leader>gf", "<cmd>ToggleTerm direction=float<cr> lazygit<cr>", opts)
+
+-- Bufferline
+keymap("n", "<c-a>", "<cmd>:bd<CR> :bprevious<CR>", opts)
