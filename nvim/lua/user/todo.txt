@@ -1,2 +1,0 @@
--- nvim-tree; highlight goes all the way to edge fix
--- nvim-tree; change icons for git stuff
