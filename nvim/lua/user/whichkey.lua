@@ -4,9 +4,10 @@ local mappings = {
   ["<Tab>"] = { "Open Telescope" },
   g = {
     name = "Lazygit",
-    f = { "Open Lazygit in floating Terminal" }
+    f = { "Open Lazygit in floating Terminal" },
   },
-  ["/"] = { "Open Floating Terminal" }
+  ["/"] = { "Open Floating Terminal" },
+  T = { "Toggle Terminal below" },
 }
 
 local opts = {prefix = "<leader>"}

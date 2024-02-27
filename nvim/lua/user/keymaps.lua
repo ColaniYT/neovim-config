@@ -45,10 +45,12 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
+
 -- Move text up and down
 keymap("v", "<A-j>", ":m .+1<CR>==", opts) 
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
+
 -- Visual Block --
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
@@ -68,8 +70,9 @@ keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Toggleterm
 keymap("n", "<leader>/", "<cmd>ToggleTerm direction=float<cr>", opts)
-keymap('t', 'jk', '<C-\\><C-n>:ToggleTerm<CR>', opts)
+keymap("n", "<leader>T", ":botright 10split | <cmd>ToggleTerm direction=float<CR><CR>i", opts)
+keymap("t", "<Space>T", "<C-c>exit<CR>", opts)
+keymap("t", "jk", "<C-c>exit<CR>", opts)
 
 -- Lazygit
 keymap("n", "<leader>gf", "<cmd>ToggleTerm direction=float<cr> lazygit<cr>", opts)
-
