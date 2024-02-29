@@ -19,4 +19,4 @@ require "nvim-tree".setup {
 }
 vim.cmd(":NvimTreeToggle")
 vim.opt.fillchars = { eob = " "}
-vim.cmd('hi NvimTreeWinSeparator guifg=#22222c guibg=#22222c')
+vim.cmd('hi NvimTreeWinSeparator guifg=#FFFFFF guibg=#22222c')
