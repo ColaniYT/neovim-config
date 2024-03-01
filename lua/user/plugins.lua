@@ -173,7 +173,7 @@ return packer.startup(function(use)
     },
   })
 
-  -- Trouble (nicer display of error messages)
+  -- Trouble (Error message display) 
   use "folke/trouble.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
