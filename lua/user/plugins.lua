@@ -167,7 +167,14 @@ return packer.startup(function(use)
   use "williamboman/mason-lspconfig.nvim"
 
   -- Discord rich presence
-  use 'andweeb/presence.nvim'
+  use {
+    "andweeb/presence.nvim",
+    config = function()
+      require("presence").setup {
+          neovim_image_text = "Neovim 0.9";
+      }
+    end
+  }
 
   -- LazyGit
   use({
@@ -178,7 +185,12 @@ return packer.startup(function(use)
   })
 
   -- Trouble (Error message display)
-  use "folke/trouble.nvim"
+  use {
+    "folke/trouble.nvim",
+    config = function()
+      require("trouble").setup {}
+    end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
