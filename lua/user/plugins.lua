@@ -48,7 +48,6 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-tree.lua"
 
   -- Colorschemes
-  -- use { "catppuccin/nvim", as = "catppuccin" }
   use 'Mofiqul/dracula.nvim'
 
   -- CMP Plugins
@@ -97,7 +96,6 @@ return packer.startup(function(use)
     branch = 'master',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
-
 
   -- Telescope
   use {
@@ -151,6 +149,13 @@ return packer.startup(function(use)
   -- Commenting
   use "numToStr/Comment.nvim"
   use "JoosepAlviste/nvim-ts-context-commentstring"
+  -- Todo-Comments
+  use({
+    "folke/todo-comments.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+    },
+  })
 
   -- Buffers
   use "akinsho/bufferline.nvim"
@@ -164,28 +169,15 @@ return packer.startup(function(use)
   use 'andweeb/presence.nvim'
 
   -- LazyGit
-  -- nvim v0.7.2
   use({
     "kdheepak/lazygit.nvim",
-    -- optional for floating window border decoration
     requires = {
       "nvim-lua/plenary.nvim",
     },
   })
 
-  -- Trouble (Error message display) 
+  -- Trouble (Error message display)
   use "folke/trouble.nvim"
-
-  -- Todo-Comments
-  use({
-    "folke/todo-comments.nvim",
-    requires = {
-      "nvim-lua/plenary.nvim",
-    },
-  })
-
-  -- Modes.nvim (inline message coloring)
-  use "mvllow/modes.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
