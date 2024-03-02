@@ -176,6 +176,17 @@ return packer.startup(function(use)
   -- Trouble (Error message display) 
   use "folke/trouble.nvim"
 
+  -- Todo-Comments
+  use({
+    "folke/todo-comments.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+    },
+  })
+
+  -- Modes.nvim (inline message coloring)
+  use "mvllow/modes.nvim"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
