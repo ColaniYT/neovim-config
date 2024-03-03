@@ -1,19 +1,25 @@
 require "nvim-tree".setup {
   view = {
+    side = "right",
     width = 45,
     adaptive_size = true,
     signcolumn = "no",
     number = true,
   },
-   filters = {
+  filters = {
     dotfiles = true,
   },
+  modified = {
+    enable = true,
+  },
   renderer = {
+    highlight_opened_files = "name",
+    root_folder_label = false,
     icons = {
       glyphs = {
         git = {
-          untracked = "⛛",
-          unstaged = "⛌",
+          untracked = "🆄",
+          unstaged = "🆇",
         },
       },
     },
