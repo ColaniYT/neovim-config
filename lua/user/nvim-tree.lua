@@ -18,8 +18,8 @@ require "nvim-tree".setup {
     icons = {
       glyphs = {
         git = {
-          untracked = "🆄",
-          unstaged = "🆇",
+          untracked = "⛙",
+          unstaged = "🆄",
         },
       },
     },
