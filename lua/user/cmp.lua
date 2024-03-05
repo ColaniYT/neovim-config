@@ -8,6 +8,12 @@ if not snip_status_ok then
   return
 end
 
+require("luasnip/config").setup {
+  history = true,
+  region_check_events = "InsertEnter",
+  delete_check_events = "TextChanged,InsertLeave",
+}
+
 require("luasnip/loaders/from_vscode").lazy_load()
 
 local check_backspace = function()
