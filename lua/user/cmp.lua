@@ -9,7 +9,7 @@ if not snip_status_ok then
 end
 
 luasnip.config.set_config {
-  history = true,
+  history = false,
   region_check_events = "InsertEnter",
   delete_check_events = "TextChanged,InsertLeave",
 }
