@@ -12,4 +12,3 @@ require "user.toggleterm"
 require "user.whichkey"
 require "user.comment"
 require "user.bufferline"
-
