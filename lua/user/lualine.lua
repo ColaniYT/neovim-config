@@ -1,4 +1,4 @@
-local currentTheme = "dracula"
+local currentTheme = "dracula-nvim"
 
 require('lualine').setup {
   options = {
