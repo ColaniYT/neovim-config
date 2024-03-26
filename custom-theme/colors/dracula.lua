@@ -1,1 +1,1 @@
-require("custom-theme").load()
+require("dracula").load()
