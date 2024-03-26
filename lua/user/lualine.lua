@@ -4,11 +4,7 @@ require('lualine').setup {
     theme = "dracula-nvim"
   },
   sections = {
-    lualine_a = {
-      {
-        'filename',
-        path = 1,
-      }
+    lualine_b = {
     }
   }
 }
