@@ -2,7 +2,7 @@ local dracula = require("dracula")
 local configs = dracula.configs()
 local colors = dracula.colors()
 
-local bg = configs.lualine_bg_color or colors.black
+local bg = configs.lualine_bg_color or colors.lualine_background 
 
 local normal = {
    a = { fg = colors.black, bg = colors.purple, gui = 'bold' },
@@ -11,13 +11,13 @@ local normal = {
 }
 
 local command = {
-   a = { fg = colors.black, bg = colors.cyan, gui = 'bold' },
-   b = { fg = colors.cyan, bg = bg },
+   a = { fg = colors.black, bg = colors.yellow, gui = 'bold' },
+   b = { fg = colors.yellow, bg = bg },
 }
 
 local visual = {
-   a = { fg = colors.black, bg = colors.pink, gui = 'bold' },
-   b = { fg = colors.pink, bg = bg },
+   a = { fg = colors.black, bg = colors.cyan, gui = 'bold' },
+   b = { fg = colors.cyan, bg = bg },
 }
 
 local inactive = {

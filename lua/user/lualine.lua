@@ -1,9 +1,7 @@
-local currentTheme = "dracula-nvim"
-
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = currentTheme,
+    theme = "dracula-nvim"
   },
   sections = {
     lualine_a = {

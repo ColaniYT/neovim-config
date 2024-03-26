@@ -13,5 +13,5 @@ local mappings = {
 
 local opts = {prefix = "<leader>"}
 wk.register(mappings, opts)
-vim.cmd(":hi WhichKeyFloat guibg=#22222c")
-vim.cmd(":hi WhichKey guibg=#22222c")
+vim.cmd(":hi WhichKeyFloat guibg=#1B2326")
+vim.cmd(":hi WhichKey guibg=#1B2326")
