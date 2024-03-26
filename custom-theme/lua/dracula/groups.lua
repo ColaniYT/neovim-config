@@ -82,8 +82,8 @@ local function setup(configs)
       CursorLine = { bg = colors.selection, },
       ColorColumn = { bg = colors.selection, },
 
-      StatusLine = { fg = colors.white, bg = colors.black, },
-      StatusLineNC = { fg = colors.comment, },
+      StatusLine = { fg = colors.white, bg = colors.lualine_background, },
+      StatusLineNC = { fg = colors.comment, bg = colors.lualine_background, },
       StatusLineTerm = { fg = colors.white, bg = colors.black, },
       StatusLineTermNC = { fg = colors.comment, },
 
