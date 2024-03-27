@@ -23,7 +23,6 @@ return {
    gutter_fg = "#4B5263",
    nontext = "#3B4048",
    white = "#ABB2BF",
-   very_white = "#FFFFFF",
    black = "#191A21",
    lualine_background = "#36454D",
 }
