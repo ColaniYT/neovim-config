@@ -390,7 +390,7 @@
   "Terminal Type" : "xterm-256color",
   "Horizontal Spacing" : 1,
   "Option Key Sends" : 2,
-  "Only The Default BG Color Uses Transparency" : true,
+  "Only The Default BG Color Uses Transparency" : false,
   "Minimum Contrast" : 0,
   "Custom Icon Path" : "\/Users\/christopher\/Desktop\/privateStaticVoidMain\/icons\/Neovim.png",
   "Ansi 15 Color" : {
@@ -404,7 +404,7 @@
     "Blue Component" : 0.73333334922790527,
     "Red Component" : 0
   },
-  "Transparency" : 0.20000000000000001,
+  "Transparency" : 0,
   "Initial Text" : "",
   "Background Color" : {
     "Red Component" : 0.28627450980392155,
