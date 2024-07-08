@@ -89,4 +89,4 @@ keymap('n', '<leader>rn', '<cmd>lua require("renamer").rename()<cr>', { noremap 
 keymap('v', '<leader>rn', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
 
 -- Trouble
-keymap('n', "<leader>t", "<cmd>TroubleToggle<CR>", opts)
+keymap('n', "<leader>t", "<cmd>Trouble diagnostics toggle<CR>", opts)
