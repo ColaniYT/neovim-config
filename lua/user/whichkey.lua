@@ -1,17 +1,15 @@
 local wk = require("which-key")
 
 local mappings = {
-  e = { "Toggle Nvim-Tree" },
-  ["<Tab>"] = { "Open Telescope" },
-  g = {
-    name = "Lazygit",
-    f = { "Open Lazygit in floating Terminal" },
-  },
-  ["/"] = { "Open Floating Terminal" },
-  t = { "Toggle Trouble" },
+    { "<leader>", desc = "<leader>/" },
+    { "<leader>", group = "Lazygit" },
+    { "<leader>", desc = "<leader>gf" },
+    { "<leader>", desc = "<leader>e" },
+    { "<leader>", desc = "<leader><Tab>" },
+    { "<leader>", desc = "<leader>t" },
 }
 
 local opts = {prefix = "<leader>"}
-wk.register(mappings, opts)
+wk.add(mappings, opts)
 vim.cmd(":hi WhichKeyFloat guibg=#1B2326")
 vim.cmd(":hi WhichKey guibg=#1B2326")
