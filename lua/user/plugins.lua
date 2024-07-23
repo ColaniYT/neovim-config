@@ -38,9 +38,8 @@ packer.init {
   },
 }
 
--- Install your plugins here
+
 return packer.startup(function(use)
-  -- My plugins here
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim"    -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim"  -- Useful lua functions used ny lots of plugins
@@ -49,6 +48,7 @@ return packer.startup(function(use)
 
   -- Colorschemes
   use 'Mofiqul/dracula.nvim'
+  use 'echasnovski/mini.icons'
 
   -- CMP Plugins
   use "hrsh7th/nvim-cmp"
@@ -121,11 +121,7 @@ return packer.startup(function(use)
     config = function()
       vim.o.timeout = true
       vim.o.timeoutlen = 300
-      require("which-key").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      }
+      require("which-key").setup()
     end
   }
 
