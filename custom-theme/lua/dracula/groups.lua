@@ -301,7 +301,7 @@ local function setup(configs)
       FlashLabel =  { bg = colors.red, fg = colors.bright_white },
 
       -- NvimTree
-      NvimTreeNormal = { fg = colors.fg, bg = colors.menu, },
+      NvimTreeNormal = { fg = colors.fg, bg = colors.nvim_tree_background, },
       NvimTreeVertSplit = { fg = colors.bg, bg = colors.bg, },
       NvimTreeRootFolder = { fg = colors.fg, bold = true, },
       NvimTreeGitDirty = { fg = colors.yellow, },

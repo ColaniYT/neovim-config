@@ -18,6 +18,7 @@ return {
    bright_magenta = "#FF92DF",
    bright_cyan = "#A4FFFF",
    bright_white = "#FFFFFF",
+   nvim_tree_background = '#1D2529',
    menu = "#242E33",
    visual = "#3E4452",
    gutter_fg = "#4B5263",
