@@ -307,7 +307,7 @@ local function setup(configs)
       NvimTreeGitDirty = { fg = colors.yellow, },
       NvimTreeGitNew = { fg = colors.bright_green, },
       NvimTreeImageFile = { fg = colors.pink, },
-      NvimTreeFolderIcon = { fg = colors.purple, },
+      NvimTreeFolderIcon = { fg = colors.fg, },
       NvimTreeIndentMarker = { fg = colors.nontext, },
       NvimTreeEmptyFolderName = { fg = colors.comment, },
       NvimTreeFolderName = { fg = colors.fg, },
