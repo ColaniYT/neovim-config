@@ -1,7 +1,7 @@
 require "nvim-tree".setup {
   hijack_cursor = true,
   view = {
-    side = "right",
+    side = "left",
     width = 45,
     adaptive_size = true,
     signcolumn = "no",
