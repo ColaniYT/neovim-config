@@ -47,7 +47,8 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-tree.lua"
 
   -- Colorschemes
-  use 'Mofiqul/dracula.nvim'
+  -- use 'Mofiqul/dracula.nvim'
+  use '~/.config/nvim/chalkboard'
   use 'echasnovski/mini.icons'
 
   -- CMP Plugins

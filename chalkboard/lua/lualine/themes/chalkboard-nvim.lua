@@ -1,6 +1,6 @@
-local dracula = require("dracula")
-local configs = dracula.configs()
-local colors = dracula.colors()
+local chalkboard = require("chalkboard")
+local configs = chalkboard.configs()
+local colors = chalkboard.colors()
 
 local bg = configs.lualine_bg_color or colors.lualine_background 
 

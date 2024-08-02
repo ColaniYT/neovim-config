@@ -4,7 +4,7 @@ local cmd = vim.cmd
 local nvim_set_hl = vim.api.nvim_set_hl
 local tbl_deep_extend = vim.tbl_deep_extend
 
----@class DraculaConfig
+---@class ChalkboardConfig
 ---@field italic_comment boolean
 ---@field transparent_bg boolean
 ---@field show_end_of_buffer boolean
@@ -17,9 +17,9 @@ local DEFAULT_CONFIG = {
    transparent_bg = false,
    show_end_of_buffer = false,
    lualine_bg_color = nil,
-   colors = require("dracula.palette"),
+   colors = require("chalkboard.palette"),
    overrides = {},
-   theme = 'dracula'
+   theme = 'chalkboard'
 }
 
 local TRANSPARENTS = {
@@ -63,12 +63,12 @@ local function override_groups(groups, overrides)
    return groups
 end
 
----apply dracula colorscheme
----@param configs DraculaConfig
+---apply chalkboard colorscheme
+---@param configs ChalkboardConfig
 local function apply(configs)
    local colors = configs.colors
    apply_term_colors(colors)
-   local groups = require("dracula.groups").setup(configs)
+   local groups = require("chalkboard.groups").setup(configs)
 
    -- apply transparents
    if configs.transparent_bg then
@@ -89,20 +89,20 @@ local function apply(configs)
    end
 end
 
----@type DraculaConfig
+---@type ChalkboardConfig
 local user_configs = {}
 
---- get dracula configs
----@return DraculaConfig
+--- get chalkboard configs
+---@return ChalkboardConfig
 local function get_configs()
    local configs = DEFAULT_CONFIG
 
-   if g.colors_name == 'dracula-soft' then
-      configs.theme = 'dracula-soft'
-      configs.colors = require('dracula.palette-soft')
-   elseif g.colors_name == 'dracula' then
-      configs.theme = 'dracula'
-      configs.colors = require('dracula.palette')
+   if g.colors_name == 'chalkboard-soft' then
+      configs.theme = 'chalkboard-soft'
+      configs.colors = require('chalkboard.palette-soft')
+   elseif g.colors_name == 'chalkboard' then
+      configs.theme = 'chalkboard'
+      configs.colors = require('chalkboard.palette')
    end
 
    configs = tbl_deep_extend("force", configs, user_configs)
@@ -111,10 +111,10 @@ local function get_configs()
 end
 
 ---setup dracula colorscheme
----@param configs DraculaConfig?
+---@param configs ChalkboardConfig?
 local function setup(configs)
    if type(configs) == "table" then
-      user_configs = configs --[[@as DraculaConfig]]
+      user_configs = configs --[[@as ChalkboardConfig]]
    end
 end
 
@@ -122,7 +122,7 @@ end
 ---@param theme string?
 local function load(theme)
    if vim.fn.has("nvim-0.7") ~= 1 then
-      vim.notify("dracula.nvim: you must use neovim 0.7 or higher")
+      vim.notify("chalkboard.nvim: you must use neovim 0.7 or higher")
       return
    end
 
@@ -137,7 +137,7 @@ local function load(theme)
 
    o.background = "dark"
    o.termguicolors = true
-   g.colors_name = theme or 'dracula'
+   g.colors_name = theme or 'chalkboard'
 
    apply(get_configs())
 end
